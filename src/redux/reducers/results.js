@@ -13,8 +13,12 @@ const initialState = {
 };
 
 const resultsReducer = (state = initialState, action) => {
+    //console.log('resultsSearch', state);
+
     switch (action.type) {
+        
         case FETCH_RECIPES_START:
+            console.log('resultsReducer',  {...state, isLoading: true, data: [] });
             return { ...state, isLoading: true, data: [] };
         case FETCH_RECIPES_COMPLETE:
             return { ...state, isLoading: false, data: action.payload };

@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchMealDetail, isLoadingMealDetail, mealDetailData, mealDetailError } from "../redux/slices/detail";
+import { fetchMealDetail } from "../redux/slices/detail";
+import { isLoadingMealDetail, mealDetailData, mealDetailError} from "../redux/selectors";
 
 const Meal = () => {
  const { id } = useParams();

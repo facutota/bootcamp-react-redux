@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import MealItem from "../components/MealItem";
-import { addSearchItem, fetchRecipes } from "../redux/actions/results";
+
+import { fetchRecipes, addSearchItem} from "../redux/slices/results";
+
 import { isLoadingDetail, detailData, detailError } from "../redux/selectors";
 
 const Index = () => {

@@ -36,11 +36,9 @@ export const fetchMealDetail = (mealId) => async dispatch => {
     } catch (error) {
         dispatch(fetchMealError(error));
     }
-}
+};
 
-export const isLoadingMealDetail = (state) => state.detailSlice.isLoading;
-export const mealDetailData = (state) => state.detailSlice.data;
-export const mealDetailError = (state) => state.detailSlice.error;
+
 
 export default detailSlice.reducer;
 
